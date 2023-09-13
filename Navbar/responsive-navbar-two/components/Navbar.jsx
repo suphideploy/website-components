@@ -4,7 +4,7 @@ import React from 'react';
 import Image from 'next/image';
 import Logo from '@/public/logo/Logo.png';
 import Link from 'next/link';
-import {AiOutlineClose, AiOutlineMenu} from 'react-icons/ai';
+import {AiOutlineClose, AiOutlineMenu, AiOutlineInstagram, AiOutlineFacebook, AiOutlineTwitter} from 'react-icons/ai';
 import { useState } from 'react';
 const Navbar = () => {
     const [menuOpen, setMenuOpen] = useState(false)
@@ -45,6 +45,7 @@ const Navbar = () => {
                 
               </ul>  
            </div>
+           
            <div onClick={handleNav} className='md:hidden cursor-pointer pl-24'>
             <AiOutlineMenu size={25} />
 
@@ -58,7 +59,49 @@ const Navbar = () => {
                     <AiOutlineClose size={25} />
                 </div>
             </div>
-         </div>
+            <div className="flex-col py-4">
+              <ul>
+                <Link href="/">
+                  <li onClick={() => setMenuOpen(false)} className='py-4 cursor-pointer'>
+                    Why Us
+                  </li>
+                </Link>
+                <Link href="/contact">
+                  <li onClick={() => setMenuOpen(false)} className='py-4 cursor-pointer'>
+                    Contact Us
+                  </li>
+                </Link>
+                <Link href="/">
+                  <li onClick={() => setMenuOpen(false)} className='py-4 cursor-pointer'>
+                    About Us
+                  </li>
+                </Link>
+                <Link href="/contact">
+                  <li onClick={() => setMenuOpen(false)} className='py-4 cursor-pointer'>
+                    Our Services
+                  </li>
+                </Link>
+              </ul>
+            </div>
+             <div className="flex flex-row justify-around pt-10 items-center">
+              <AiOutlineInstagram size={30} className='cursor-pointer' />
+              <AiOutlineFacebook  size={30} className='cursor-pointer' />
+              <AiOutlineTwitter   size={30} className='cursor-pointer' />   
+             </div>
+             
+            <Link href='/'>
+                <Image
+                src={Logo}
+                alt="Logo"
+                
+                height="30"
+                className='md:cursor-pointer pt-6'
+                priority
+                /> 
+           </Link>
+           
+
+          </div>
         </div>
 
     </nav>
