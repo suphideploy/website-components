@@ -1,8 +1,12 @@
-import React from "react";
-import Button from "./components/Button";
-import Navbar from "./components/Navbar/Navbar";
+import Image from 'next/image'
+import { Inter } from 'next/font/google';
+import Button from '@/components/Button';
+import Navbar from '@/components/Navbar/Navbar';
 
-const App = () => {
+
+const inter = Inter({ subsets: ['latin'] })
+
+export default function Home() {
   return (
     <section
       className="h-screen bg-Hero bg-cover
@@ -20,6 +24,4 @@ const App = () => {
       </div>
     </section>
   );
-};
-
-export default App;
+}

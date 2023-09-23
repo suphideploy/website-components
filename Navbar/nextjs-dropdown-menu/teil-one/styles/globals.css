@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+@media (prefers-color-sheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+  body {
+    color: black;
+    background: white;
+  }
+}

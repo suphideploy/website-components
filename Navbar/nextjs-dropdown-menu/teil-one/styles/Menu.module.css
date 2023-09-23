@@ -1,0 +1,31 @@
+.header {
+    margin: auto;
+    width: 1280px;
+}
+
+.header ul {
+    background-color: black;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+}
+.header ul li{
+    border-right: 1px solid gray;
+    font-size: 14px;
+    color: white;
+    padding: 1rem 2rem;
+}
+.btnStyle{
+    background-color: transparent;
+    border: none;
+    align-items: center;
+    display: flex;
+   
+}
+.ArrowDown {
+    margin-left: 10px;
+    border-top:0.5rem solid gray;
+    border-left:0.4rem solid transparent;
+    border-right:0.4rem solid transparent;
+}
